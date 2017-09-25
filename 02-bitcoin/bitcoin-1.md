@@ -194,13 +194,13 @@ Transactions not yet in a block. Also known as unordered transactions.
 * If a new bitcoin address is used for each incoming transaction, a new private key  would also be created
 
 ##### HD (Hierarchical Deterministic) Wallets
-- Deterministic
-- priv_key_n = Hash(SEED | n)
- - pub_key_n = F (priv_key_n)
- - wallet address = G (priv_key_n)
-- Mycelium wallet allows users to genearate the SEED from 12 words (Mnemonic codes)
-- For different departments, you can generate separate deterministic set of private keys by giving every department a separate CHAIN_CODE
- - priv_key_n = Hash(SEED | n | CHAIN_CODE)
+* Deterministic
+* priv_key_n = Hash(SEED | n)
+  - pub_key_n = F (priv_key_n)
+  - wallet address = G (priv_key_n)
+* Mycelium wallet allows users to genearate the SEED from 12 words (Mnemonic codes)
+* For different departments, you can generate separate deterministic set of private keys by giving every department a separate CHAIN_CODE
+  - priv_key_n = Hash(SEED | n | CHAIN_CODE)
 
 ##### Generating public keys without private keys
 * Good for exposed web servers, Can derive new public keys without having access to the corresponding private keys
@@ -248,10 +248,10 @@ Therefore,
 * ```Hard fork``` : Software / rule change that old software sees as invalid.
 * ```Soft fork``` : Software / rule change that produces blocks and transactions old software still accepts.
 * Example of Hard fork:
- - Increasing block size to 2 MB
+  - Increasing block size to 2 MB
 * Example of Soft fork:
- - Pay to Script Hash
- - Segregated Witness (SegWit)
+  - Pay to Script Hash
+  - Segregated Witness (SegWit)
 
 *Voting mechanism for creating a fork*:
 * Developers build a voting mechanism that enables miners to make sure a majority are upgraded before activating a change. For example, 75% of last 1000 blocks (about 1 week) have upgraded.
